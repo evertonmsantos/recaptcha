@@ -37,7 +37,7 @@ func Invisible(endpoint string) (string, error) {
 
 	token := regexp.MustCompile(`(?m)"rresp","(.*?)"`).FindStringSubmatch(req.Body)
 
-	if len(inputToken) == 0 {
+	if len(token) == 0 {
 		return "", errors.New("não foi possivel decifrar o captcha")
 	}
 
